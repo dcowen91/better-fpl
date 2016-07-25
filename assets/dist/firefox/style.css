@@ -1,0 +1,140 @@
+*:not(input):not(textarea) {
+  outline: none; }
+
+.fixtures-container, .fixtures-container--field {
+  height: 15px;
+  float: right;
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .fixtures-container li, .fixtures-container--field li {
+    width: 12px;
+    height: 12px;
+    background: blue;
+    margin: 0 2px;
+    border-radius: 2px; }
+    .fixtures-container li.diff-1, .fixtures-container--field li.diff-1 {
+      background: #00b050; }
+    .fixtures-container li.diff-2, .fixtures-container--field li.diff-2 {
+      background: #92d050; }
+    .fixtures-container li.diff-3, .fixtures-container--field li.diff-3 {
+      background: #ffff00; }
+    .fixtures-container li.diff-4, .fixtures-container--field li.diff-4 {
+      background: #ed7d31; }
+    .fixtures-container li.diff-5, .fixtures-container--field li.diff-5 {
+      background: #ff0000; }
+
+.fixtures-container--field {
+  height: 20px;
+  width: 100%;
+  float: none;
+  background: rgba(0, 111, 55, 0.9);
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px; }
+
+.ism .ism-element-row--pitch {
+  padding-bottom: 3.1rem; }
+
+.ism .ism-pitch {
+  background-size: cover; }
+
+.ism .ism-pitch__unit .ism-element__data {
+  border-radius: 0; }
+
+body.dialog-max-width #ismjs-dialog {
+  max-width: 960px; }
+
+body.open-options {
+  overflow: hidden; }
+  body.open-options #better-fpl-options-section {
+    display: flex; }
+
+#better-fpl-options-section {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  display: flex;
+  background: #fff;
+  display: none; }
+  #better-fpl-options-section .close-options {
+    position: absolute;
+    top: 4rem;
+    right: 5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border: none;
+    background: transparent;
+    outline: none; }
+    #better-fpl-options-section .close-options svg {
+      margin-left: 2rem; }
+  #better-fpl-options-section header {
+    height: 100px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    align-items: center; }
+    #better-fpl-options-section header .logo {
+      height: 48px;
+      width: auto;
+      margin-left: 4rem; }
+  #better-fpl-options-section .navigation {
+    width: 300px;
+    background: #f5f5f5;
+    flex-shrink: 0; }
+    #better-fpl-options-section .navigation header {
+      border-bottom: none;
+      margin-bottom: 80px;
+      background: #e5e5e5; }
+    #better-fpl-options-section .navigation a {
+      display: block;
+      padding: 2rem 4rem;
+      text-decoration: none;
+      color: #aaa; }
+      #better-fpl-options-section .navigation a.active {
+        color: inherit;
+        box-shadow: inset 4px 0 0 #003C60; }
+  #better-fpl-options-section .sections {
+    flex-grow: 1;
+    overflow: auto; }
+    #better-fpl-options-section .sections header {
+      padding: 0 5rem; }
+    #better-fpl-options-section .sections section {
+      display: none; }
+      #better-fpl-options-section .sections section.active {
+        display: block; }
+    #better-fpl-options-section .sections article {
+      padding: 10rem 5rem; }
+    #better-fpl-options-section .sections .option {
+      margin-bottom: 3rem; }
+      #better-fpl-options-section .sections .option label {
+        margin-left: 3rem;
+        cursor: pointer; }
+
+#better-fpl-options-section .custom-fixtures {
+  display: flex;
+  flex-wrap: wrap; }
+  #better-fpl-options-section .custom-fixtures > div {
+    width: 25%;
+    padding: 3rem; }
+  #better-fpl-options-section .custom-fixtures .home, #better-fpl-options-section .custom-fixtures .away {
+    display: flex;
+    padding: 1rem 0;
+    align-items: center; }
+  #better-fpl-options-section .custom-fixtures .ratings {
+    margin-left: auto;
+    border: 1px solid #eee;
+    border-radius: 3px;
+    display: flex; }
+    #better-fpl-options-section .custom-fixtures .ratings span {
+      width: 25px;
+      height: 25px;
+      text-align: center;
+      line-height: 25px;
+      border-right: 1px solid #eee;
+      cursor: pointer; }
+      #better-fpl-options-section .custom-fixtures .ratings span:last-child {
+        border: none; }

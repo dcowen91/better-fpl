@@ -1,0 +1,20 @@
+extends ../section.pug
+block variables
+  - var className = 'active'
+  - var title = "Basic"
+  - 
+    var options = [
+      {
+        type: 'checkbox',
+        checked: true,
+        name: 'Hide confirmation dialog boxes',
+        id: 'hide-modals'
+      },
+      {
+        type: 'checkbox',
+        checked: true,
+        name: 'Disable horizontal scroll in player dialogs',
+        id: 'disable-modal-horizontal-scroll'
+      },
+      
+    ]

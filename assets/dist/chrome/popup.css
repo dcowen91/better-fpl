@@ -1,0 +1,38 @@
+body {
+  padding: 2rem;
+  text-align: center;
+  color: #333;
+  line-height: 1.5em;
+}
+
+p {
+  display: block;
+  margin: 2rem 0;
+}
+
+.options-button {
+  border: none;
+  outline: none;
+  margin: 0 1.5rem;
+  padding: 0.8rem 2rem;
+  background: #1abc9c;
+  color: #fff;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+/* Options Page */
+#options {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: ##fff;
+  padding: 2rem;
+  display: none;
+}
+
+#options.open {
+  display: block;
+}

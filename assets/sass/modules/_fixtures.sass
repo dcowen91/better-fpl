@@ -1,0 +1,44 @@
+.fixtures-container
+  height: 15px
+  float: right
+  width: auto
+  display: flex
+  justify-content: center
+  align-items: center
+
+  li
+    width: 12px
+    height: 12px
+    background: blue
+    margin: 0 2px
+    border-radius: 2px
+
+    &.diff-1
+      background: #00b050
+    &.diff-2
+      background: #92d050
+    &.diff-3
+      background: #ffff00
+    &.diff-4
+      background: #ed7d31
+    &.diff-5
+      background: #ff0000
+
+.fixtures-container--field
+  @extend .fixtures-container
+
+  height: 20px
+  width: 100%
+  float: none
+  background: rgba(0,111,55,0.9)
+  border-bottom-left-radius: 3px
+  border-bottom-right-radius: 3px
+
+
+// Fix issues outside fixture list
+.ism .ism-element-row--pitch
+  padding-bottom: 3.1rem
+.ism .ism-pitch
+  background-size: cover
+.ism .ism-pitch__unit .ism-element__data
+  border-radius: 0

@@ -1,0 +1,13 @@
+block variables
+
+section(id= (title.toLowerCase()), class= className)
+  header
+    h1= title + " options"
+
+  article
+    each option in options
+      div.option
+        input(class='option-value', id= option.id, type= option.type, checked=(option.checked===true ? 'checked' : undefined))
+        label(for= option.id)= option.name
+
+    block options

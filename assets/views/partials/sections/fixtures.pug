@@ -1,0 +1,45 @@
+extends ../section.pug
+
+block variables
+  - var className = ''
+  - var title = "Fixtures"
+  -
+    var options = [
+      {
+        type: 'checkbox',
+        checked: true,
+        name: 'Show players upcoming fixtures',
+        id: 'show-fixtures'
+      },
+      {
+        type: 'checkbox',
+        checked: false,
+        name: 'Use custom fixture difficulties (coming soon)',
+        id: 'use-custom-difficulties'
+      }
+    ]
+
+//- block options
+//-   - var teams = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
+//-   div.custom-fixtures
+//-     each team in teams
+//-       div(data-team= team)
+//-         h4
+//-         div.home
+//-           input(type='hidden', id= team + '-home')
+//-           span.location Home
+//-           div.ratings
+//-             span 1
+//-             span 2
+//-             span 3
+//-             span 4
+//-             span 5
+//-         div.away
+//-           input(type='hidden', id= team + '-away')
+//-           span.location Away
+//-           div.ratings
+//-             span 1
+//-             span 2
+//-             span 3
+//-             span 4
+//-             span 5

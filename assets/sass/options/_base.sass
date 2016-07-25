@@ -1,0 +1,84 @@
+body.open-options
+  overflow: hidden
+
+  #better-fpl-options-section
+    display: flex
+
+#better-fpl-options-section
+  position: fixed
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  z-index: 999
+  display: flex
+  background: #fff
+  display: none
+
+  .close-options
+    position: absolute
+    top: 4rem
+    right: 5rem
+    cursor: pointer
+    display: flex
+    align-items: center
+    border: none
+    background: transparent
+    outline: none
+
+    svg
+      margin-left: 2rem
+
+  header
+    height: 100px
+    border-bottom: 1px solid #eee
+    display: flex
+    align-items: center
+
+    .logo
+      height: 48px
+      width: auto
+      margin-left: 4rem
+
+  .navigation
+    width: 300px
+    background: #f5f5f5
+    flex-shrink: 0
+
+    header
+      border-bottom: none
+      margin-bottom: 80px
+      background: #e5e5e5
+
+    a
+      display: block
+      padding: 2rem 4rem
+      text-decoration: none
+      color: #aaa       
+
+      &.active
+        color: inherit
+        box-shadow: inset 4px 0 0 #003C60
+
+  .sections
+    flex-grow: 1
+    overflow: auto
+
+    header
+      padding: 0 5rem
+
+    section
+      display: none
+
+      &.active
+        display: block
+
+    article
+      padding: 10rem 5rem
+
+    .option
+      margin-bottom: 3rem
+
+      label
+        margin-left: 3rem
+        cursor: pointer
