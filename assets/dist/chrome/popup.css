@@ -21,18 +21,12 @@ p {
   cursor: pointer;
 }
 
-/* Options Page */
-#options {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: ##fff;
-  padding: 2rem;
+.alert {
+  color: red;
   display: none;
+  margin-bottom: 0;
 }
 
-#options.open {
+.alert.show {
   display: block;
 }

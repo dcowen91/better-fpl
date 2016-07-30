@@ -11,7 +11,7 @@ document.querySelector('#go-to-options').addEventListener('click', function() {
     let tab = tabs[0]
 
     if (!tab.url || tab.url.indexOf('fantasy.premierleague') < 0)
-      return window.close()
+      return document.querySelector('.alert').className += ' show'
 
     if (tab.url.indexOf('#') > -1)
       tab.url = tab.url.split('#')[0]

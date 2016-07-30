@@ -5,10 +5,27 @@ const transferModal = {
   cache: function() {
     this.listElements = $('tr.ism-row-select')
     this.modal = $('#ismr-elements-menu')
+    this.listViews = $('#ismr-elements-list')
   },
 
   bind: function() {
     this.listElements.on('click', this.doListElementAction.bind(this))
+  },
+
+  // Apply a mutation observer on the list views
+  watchListViews: function() {
+    let observer = new MutationObserver((mutations) => {
+
+      // When we add fixtures the number of mutations equal the number of list players
+      // so when they don't match, then we need to recache the players and add fixtures again
+      if (mutations[0].addedNodes[0].className !== 'fixtures-container') {
+        this.cache()
+        this.bind()
+      }
+
+    })
+
+    this.listViews.each((i, view) => observer.observe(view, { subtree: true, childList: true }))
   },
 
   updateButtons: function() {
@@ -36,6 +53,7 @@ const transferModal = {
   init: function() {
     this.cache()
     this.bind()
+    this.watchListViews()
   }
 }
 

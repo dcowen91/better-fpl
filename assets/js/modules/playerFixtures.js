@@ -43,14 +43,14 @@ const playerFixtures = {
       let fixture = player.fixtures[i]
       let fixtureElement = $('<li/>', {
         class: 'diff-' + fixture.difficulty,
-        title: fixture.opponent_name
+        title: fixture.opponent_name + (fixture.is_home ? ' (H)' : ' (A)')
       })
 
       fixturesContainer.append(fixtureElement)
     }
 
     // Insert the fixtures container before the append target
-    fixturesContainer.insertBefore(appendTarget)
+    fixturesContainer.insertAfter(appendTarget)
   },
 
   // Add fixtures to a player in list view
@@ -69,7 +69,7 @@ const playerFixtures = {
       let fixture = player.fixtures[i]
       let fixtureElement = $('<li/>', {
         class: 'diff-' + fixture.difficulty,
-        title: fixture.opponent_name
+        title: fixture.opponent_name + (fixture.is_home ? ' (H)' : ' (A)')
       })
 
       fixturesContainer.append(fixtureElement)
