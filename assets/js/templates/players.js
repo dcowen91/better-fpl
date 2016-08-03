@@ -22,7 +22,7 @@ const playerTemplates = {
       let template = $(this)
       let content = template.text()
       // Add data-id
-      content = content.replace(self.stringToReplace, self.stringToReplace + ' data-id="<%- id %>"')
+      content = content.replace(self.stringToReplace, self.stringToReplace + ' data-id="<%- id %>"' + ' data-code="<%- code %>"')
       template.text(content)
     })
   },

@@ -6,7 +6,9 @@ let settings = {
   settings: {
     hideModals: true,
     showFixtures: true,
-    disableModalHorizontalScroll: true
+    disableModalHorizontalScroll: true,
+    transferHightlightWatch: true,
+    transferHightlightPlayer: true
   },
 
   sync: function(done) {
