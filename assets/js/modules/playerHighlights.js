@@ -4,10 +4,6 @@ const settings = require('../core/settings.js')
 
 const playerHighlights = {
   
-  // Variables
-  transferHightlightWatch: settings.get('transferHightlightWatch') || true,
-  transferHightlightPlayer: settings.get('transferHightlightPlayer') || true,
-  
   // Cache variables
   cache: function() {
     this.listViews = $('#ismr-elements-list')
@@ -23,8 +19,21 @@ const playerHighlights = {
  // Add fixtures to a player in list view
   addHighlighttoListRow: function(elem) {
     elem = $(elem)
-    if (!!settings.get('transferHightlightPlayer')) {
+    
+     let code = elem.attr('data-code')
+
+    if (code === undefined)
+      code = elem.find('[data-code]').attr('data-code')
+    
+    if (elem.hasClass("ism-element-list__in-squad"))
+    {
+      elem.css('background-color', 'lightcoral')
+    }
+    else if (!!settings.get('transferHightlightPlayer') && this.players.includes(parseInt(code))) {
       elem.css('background-color', 'lightblue')
+    }
+    else {
+      elem.css('background-color', 'white')
     }
   },
     
@@ -37,6 +46,11 @@ const playerHighlights = {
       if (mutations.length !== this.listPlayers.length) {
         this.listPlayers = this.listViews.find('.ism-row-select')
         this.listPlayers.each((i, elem) => this.addHighlighttoListRow(elem))
+        players.getWatchlistPlayers()
+      .then((players) => {
+        this.players = players
+        this.render()
+      })
       }
 
     })
@@ -64,7 +78,7 @@ const playerHighlights = {
     this.watchListViews()
 
     // Get the players from the core module and begin rendering
-    players.get()
+    players.getWatchlistPlayers()
       .then((players) => {
         this.players = players
         this.render()

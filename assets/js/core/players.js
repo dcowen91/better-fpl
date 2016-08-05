@@ -16,6 +16,10 @@ const elements = {
       })
     )
   },
+  
+  loadWatchList: function() {
+    return Promise.resolve( $.ajax('https://fantasy.premierleague.com/drf/watchlist'))
+  },
 
   get: function() {
     let done = []
@@ -53,6 +57,11 @@ const elements = {
       })
 
     return Promise.resolve(elements)
+  },
+  
+  getWatchlistPlayers()
+  {
+    return this.loadWatchList()
   }
 }
 
