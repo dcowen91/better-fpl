@@ -28,6 +28,8 @@ const playerHighlights = {
 
     if (elem.hasClass("ism-element-list__in-squad")) {
       elem.css('background-color', 'lightcoral')
+      
+      // Fix text color for child elements
       let appendTarget = elem.find('.ism-table--el__strong')
       appendTarget = $(appendTarget)
       appendTarget.css('color', '#242424')
@@ -59,9 +61,7 @@ const playerHighlights = {
             this.render()
           })
       }
-
     })
-
     this.listViews.each((i, view) => observer.observe(view, { subtree: true, childList: true }))
   },
 
